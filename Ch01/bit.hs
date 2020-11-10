@@ -1,8 +1,6 @@
 {-# LANGUAGE BinaryLiterals #-}
 
 -- bit.hs
--- conversion to binary: 
---   https://stackoverflow.com/a/1959789
 
 import Data.Bits
 import Numeric (showIntAtBase)
@@ -20,9 +18,9 @@ main = do
       pXorq = p `xor` q
 
 
-  putStrLn $ showIntAtBase 2 intToDigit pOrq  ""
-  putStrLn $ showIntAtBase 2 intToDigit pAndq ""
-  putStrLn $ showIntAtBase 2 intToDigit pXorq ""
+  putStrLn $ int2bin pOrq  
+  putStrLn $ int2bin pAndq 
+  putStrLn $ int2bin pXorq 
  
 --
 
@@ -32,4 +30,11 @@ bv = [0,1]
 p,q :: Int
 p = 0b0110110110
 q = 0b1100011101
+
+-- https://stackoverflow.com/a/1959789
+-- Bitwise operations are basically integer arithmetic, so the outcomes are integer values.
+-- To convert Int into binary form, we use showIntAtBase:
+int2bin 
+  :: Int -> String
+int2bin x = showIntAtBase 2 intToDigit x ""
 
