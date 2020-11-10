@@ -9,5 +9,8 @@ Boolean and bit operations
 
 bit comes from binary digits (by John Tukey)
 
+[Data.Bits](https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Bits.html) provides bitwise operations for integers.
+
+
 
 
