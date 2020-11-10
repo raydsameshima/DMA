@@ -25,8 +25,23 @@ For small cases, a truth table can be used to determine two propositions are equ
   * "there is at least one x such that P(x)"
   * "for some x P(x)"
 
-### 1.4
+### 1.4 Sets
+Cantor's naive set theory
 
+### 1.5 Set Operations
 
+[Data.Set](https://hackage.haskell.org/package/containers-0.6.4.1/docs/Data-Set.html)
 
+[sets introduction](https://haskell-containers.readthedocs.io/en/latest/set.html)
 
+### 1.6 Functions
+* A function f injective iff (f(x) = f(y) ==> x = y).
+
+* A function f:A->B is surjective iff B=f(A).
+
+### 1.7 Sequences and Summations
+* Example 17 (Cantor's diagonal argument)
+
+### 1.8 The Growth of Functions
+* Big-O Notation
+f is O(g) iff there exists a constants C and k such that for any x>k, |f(x)| <= C*|g(x)|.
