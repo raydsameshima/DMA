@@ -7,6 +7,7 @@ The Foundations: Logic, Sets, and Functions
 ### 1.1 Logic
 Boolean and bit operations
 
+bit comes from binary digits (by John Tukey)
 
 
 
