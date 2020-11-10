@@ -7,7 +7,7 @@ import Numeric (showIntAtBase)
 import Data.Char (intToDigit)
 
 main = do
-  putStrLn "bit operations (or,and, xor): "
+  putStrLn "Example12: bit operations (or,and, xor): "
   
   print [p .|. q | p <- bv, q <- bv]
   print [p .&. q | p <- bv, q <- bv]
