@@ -45,3 +45,16 @@ Cantor's naive set theory
 ### 1.8 The Growth of Functions
 * Big-O Notation
 f is O(g) iff there exists a constants C and k such that for any x>k, |f(x)| <= C*|g(x)|.
+
+  * O(1)
+  * O(log n)
+  * O(n)
+  * O(n * log n)
+  * O(n^2)
+  * O(n!)
+
+* Big-Omega and Big-Theta notation 
+f is Omega(g) iff there exists a constants C and k such that for any x>k, C*|g(x)| <= |f(x)|.
+
+f is Theta(g) iff f is O(g) and f is Omega(g).
+We say that f is of order g.
