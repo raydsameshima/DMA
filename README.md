@@ -58,3 +58,18 @@ f is Omega(g) iff there exists a constants C and k such that for any x>k, C*|g(x
 
 f is Theta(g) iff f is O(g) and f is Omega(g).
 We say that f is of order g.
+
+## The Fundamentals: Algorithms, the Integers, and Matrices
+
+### Algorithms
+* An algorithm is a finite set of (precise) instructions ("how to") for performing a computation.
+
+* Pseudocode = an intermediate step between an English description and an actual programming language.
+  * procedure statements
+  * assignments
+  * block
+  * comments
+  * conditional constructions (if, then, else)
+  * loop constructions (for, while)
+
+
