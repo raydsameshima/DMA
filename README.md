@@ -59,9 +59,10 @@ f is Omega(g) iff there exists a constants C and k such that for any x>k, C*|g(x
 f is Theta(g) iff f is O(g) and f is Omega(g).
 We say that f is of order g.
 
-## The Fundamentals: Algorithms, the Integers, and Matrices
+## Chapter 02
+The Fundamentals: Algorithms, the Integers, and Matrices
 
-### Algorithms
+### 2.1 Algorithms
 * An algorithm is a finite set of (precise) instructions ("how to") for performing a computation.
 
 * Pseudocode = an intermediate step between an English description and an actual programming language.
@@ -72,4 +73,13 @@ We say that f is of order g.
   * conditional constructions (if, then, else)
   * loop constructions (for, while)
 
+### 2.2 Complexity of Algorithms
+* tractable problems
+A problem is called tractable iff there is an algorithm with polynomial (O(n^b) of some b) worst-case complexity.
+(There is no guarantee that a tractable problem can be solved in a reasonable time.)
 
+* unsolvable problems
+iff no algorithm exists for solving them
+
+The first instance is the famous halting problem (Alan Turing).
+(See also 4.2 of Haskell road to logic.)
