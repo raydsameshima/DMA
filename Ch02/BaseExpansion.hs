@@ -17,3 +17,6 @@ list2int b [] = 0
 list2int b ys@(x:xs)
   = let l = length ys in
     sum $ map (\(x,y) -> y*b^x) $ zip [l-1,l-2 .. ] ys
+
+list2 = list2int 2
+base2 = baseExp 2
