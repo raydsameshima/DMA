@@ -74,20 +74,20 @@ The Fundamentals: Algorithms, the Integers, and Matrices
   * loop constructions (for, while)
 
 ### 2.2 Complexity of Algorithms
-* tractable problems
+* tractable problems: 
   A problem is called tractable iff there is an algorithm with polynomial (O(n^b) of some b) worst-case complexity.
   (There is no guarantee that a tractable problem can be solved in a reasonable time.)
 
-* unsolvable problems
+* unsolvable problems: 
   iff no algorithm exists for solving them
   The first instance is the famous halting problem (Alan Turing).
   (See also 4.2 of Haskell road to logic.)
 
-* class NP
+* class NP: 
   Many solvable problems are believed to have the property that no algorithm with polynomial worst-case time complexity solves them, but a solution, if exists, can be checked in polynomial time.
   Such a class of problems form the class NP.
 
-* NP-complete problems
+* NP-complete problems: 
   If any of NP-complete problems can be solved by a polynomial worst-case time algorithm, then all the problems can be solved by polynomial worst-case time algorithms.
   So far no-proof or no-counterexample have been found, it is generally accepted that no NP-complete problem can be solved in polynomial time. 
 
