@@ -83,3 +83,14 @@ iff no algorithm exists for solving them
 
 The first instance is the famous halting problem (Alan Turing).
 (See also 4.2 of Haskell road to logic.)
+
+* class NP
+Many solvable problems are believed to have the property that no algorithm with polynomial worst-case time complexity solves them, but a solution, if exists, can be checked in polynomial time.
+Such a class of problems form the class NP.
+
+  * NP-complete problems
+If any of NP-complete problems can be solved by a polynomial worst-case time algorithm, then all the problems can be solved by polynomial worst-case time algorithms.
+
+So far no-proof or no-counterexample have been found, it is generally accepted that no NP-complete problem can be solved in polynomial time. 
+
+
