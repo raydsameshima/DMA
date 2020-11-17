@@ -79,7 +79,7 @@ The Fundamentals: Algorithms, the Integers, and Matrices
   (There is no guarantee that a tractable problem can be solved in a reasonable time.)
 
 * unsolvable problems: 
-  iff no algorithm exists for solving them
+  A problem is unsolvable iff no algorithm exists for solving them.
   The first instance is the famous halting problem (Alan Turing).
   (See also 4.2 of Haskell road to logic.)
 
@@ -90,5 +90,27 @@ The Fundamentals: Algorithms, the Integers, and Matrices
 * NP-complete problems: 
   If any of NP-complete problems can be solved by a polynomial worst-case time algorithm, then all the problems can be solved by polynomial worst-case time algorithms.
   So far no-proof or no-counterexample have been found, it is generally accepted that no NP-complete problem can be solved in polynomial time. 
+
+### 2.3 The Integers and Division
+* division
+* gcd
+
+### 2.4 Integers and Algorithms
+* Euclidean algorithm
+* Representations of integers
+  * binary expansion
+  * binary addition
+  * binary multiplication
+
+### 2.5 Applications of Number Theory
+* Extended Euclidean algorithm
+* Chinese Remainder Theorem
+
+### 2.6 Matrices
+
+[http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html)
+[http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html)
+
+[http://dis.um.es/~alberto/hmatrix/hmatrix.html](http://dis.um.es/~alberto/hmatrix/hmatrix.html)
 
 
