@@ -108,10 +108,11 @@ The Fundamentals: Algorithms, the Integers, and Matrices
 
 ### 2.6 Matrices
 * Libraries:
-[http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html)
-[http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html)
+  * [http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra.html)
+  * [http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html](http://hackage.haskell.org/package/hmatrix-0.20.0.0/docs/Numeric-LinearAlgebra-Static.html)
 
-* An introduction: 
-[http://dis.um.es/~alberto/hmatrix/hmatrix.html](http://dis.um.es/~alberto/hmatrix/hmatrix.html)
+* Tutorials, Examples, etc
+  * An introduction: 
+  [http://dis.um.es/~alberto/hmatrix/hmatrix.html](http://dis.um.es/~alberto/hmatrix/hmatrix.html)
 
 
