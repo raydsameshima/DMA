@@ -145,4 +145,10 @@ Disjunctive syllogism  | `((p \|\| q) && (not p)) -> q`
 
 Every non-empty set of non-negative integers (i.e., natural numbers) has a least element.
 
+* Mathematical Induction
+  0. Basic step: the proposition P(0) is shown to be true.
+  0. Induction step: the implication P(n) -> P(n+1) is shown to be true for every positive integer (i.e., a natural number) n.
+
+Here, the statement P(n) for a __fixed__ n is called the inductive hypothesis.
+
 [https://www.cs.nott.ac.uk/~pszgmh/fold.pdf](https://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
