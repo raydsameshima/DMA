@@ -123,13 +123,13 @@ Mathematical Reasoning
 
 Rules                  | Tautology
 -----                  | ---------
-Addition               | p -> (p || q)
-Simplification         | (p && q) -> p
-Conjunction            | ((p) && (q)) -> (p && q)
-Modus ponens           | ( p && (p->q))
-Modus tollens          | ((not p) && (p->q)) -> (not p)
-Hypothetical syllogism | ((p->q) & (q->r)) -> (p->r)
-Disjunctive syllogism  | ((p || q) & (not p)) -> q
+Addition               | `p -> (p || q)`
+Simplification         | `(p && q) -> p`
+Conjunction            | `((p) && (q)) -> (p && q)`
+Modus ponens           | `( p && (p->q))`
+Modus tollens          | `((not p) && (p->q)) -> (not p)`
+Hypothetical syllogism | `((p->q) & (q->r)) -> (p->r)`
+Disjunctive syllogism  | `((p || q) & (not p)) -> q`
 
 
 
