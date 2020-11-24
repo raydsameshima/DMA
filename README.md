@@ -131,7 +131,14 @@ Modus tollens          | `((not p) && (p->q)) -> (not p)`
 Hypothetical syllogism | `((p->q) && (q->r)) -> (p->r)`
 Disjunctive syllogism  | `((p \|\| q) && (not p)) -> q`
 
+* Methods of proving theorems
+  * direct proof
+  * indirect proof 
+    * vacuous proof `False -> q`
+    * trivial proof `p -> True`
+    * proof by contradiction
 
+* The Halting Problem
 
 ### 3.2 Mathematical Induction
 
