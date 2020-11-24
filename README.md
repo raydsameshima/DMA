@@ -141,5 +141,8 @@ Disjunctive syllogism  | `((p \|\| q) && (not p)) -> q`
 * The Halting Problem
 
 ### 3.2 Mathematical Induction
+* The well-ordering property
+
+Every non-empty set of non-negative integers (i.e., natural numbers) has a least element.
 
 [https://www.cs.nott.ac.uk/~pszgmh/fold.pdf](https://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
