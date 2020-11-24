@@ -123,9 +123,7 @@ Mathematical Reasoning
 
 Rules                  | Tautology
 -----                  | ---------
-Addition               | ```haskell
-                         p -> (p || q)`
-                         ```
+Addition               | ``` p -> (p || q)```
 Simplification         | `(p && q) -> p`
 Conjunction            | `((p) && (q)) -> (p && q)`
 Modus ponens           | `( p && (p->q))`
