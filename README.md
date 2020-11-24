@@ -115,4 +115,24 @@ The Fundamentals: Algorithms, the Integers, and Matrices
   * An introduction: 
   [http://dis.um.es/~alberto/hmatrix/hmatrix.html](http://dis.um.es/~alberto/hmatrix/hmatrix.html)
 
+## Chapter 03
+Mathematical Reasoning
 
+### 3.1 Methods of Proof
+* Rules of inference ([infer](https://www.merriam-webster.com/dictionary/infer): to derive as a conclusion from facts or premises) 
+
+Rules                  | Tautology
+-----                  | ---------
+Addition               | p -> (p || q)
+Simplification         | (p && q) -> p
+Conjunction            | ((p) && (q)) -> (p && q)
+Modus ponens           | ( p && (p->q))
+Modus tollens          | ((not p) && (p->q)) -> (not p)
+Hypothetical syllogism | ((p->q) & (q->r)) -> (p->r)
+Disjunctive syllogism  | ((p || q) & (not p)) -> q
+
+
+
+### 3.2 Mathematical Induction
+
+[https://www.cs.nott.ac.uk/~pszgmh/fold.pdf](https://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
