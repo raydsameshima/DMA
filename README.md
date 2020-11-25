@@ -163,3 +163,7 @@ Here, the statement P(n) for a __fixed__ n is called the inductive hypothesis.
 
 ### 3.5 Program Correctness
 
+## Chappter 04
+Counting
+
+### 4.1 The Basics of Counting
