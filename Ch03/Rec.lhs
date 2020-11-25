@@ -27,4 +27,10 @@ Example 1 of 3.3 (page 203)
 >     helper acc 0 = acc
 >     helper acc n = helper (2*acc + 3) (n-1)
 
-
+> ack :: (Integral n) =>
+>        n -> n -> n
+> ack m n
+>   | m == 0          = 2*n
+>   | m > 0 && n == 0 = 0
+>   | m > 0 && n == 1 = 2
+>   | otherwise       = ack (m-1) (ack m (n-1))
