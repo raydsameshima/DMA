@@ -157,6 +157,9 @@ Here, the statement P(n) for a __fixed__ n is called the inductive hypothesis.
 
 ### 3.3 Recursive Definitions
 
-
-
 * [https://www.cs.nott.ac.uk/~pszgmh/fold.pdf](https://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
+
+### 3.4 Recursive Algorithms
+
+### 3.5 Program Correctness
+
