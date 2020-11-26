@@ -160,6 +160,16 @@ Here, the statement P(n) for a __fixed__ n is called the inductive hypothesis.
 * [https://www.cs.nott.ac.uk/~pszgmh/fold.pdf](https://www.cs.nott.ac.uk/~pszgmh/fold.pdf)
 
 ### 3.4 Recursive Algorithms
+A naive factorial would be
+
+```haskell
+factorial 0 = 1
+factorial n = n * factorial (n-1)
+```
+
+There exist more efficient and fast algorithms:
+*FFF of [FastFactorialFunctions](http://www.luschny.de/math/factorial/FastFactorialFunctions.htm)
+*A Haskel implementation by konn-san: [https://github.com/konn/factorials](https://github.com/konn/factorials)
 
 ### 3.5 Program Correctness
 
@@ -167,3 +177,15 @@ Here, the statement P(n) for a __fixed__ n is called the inductive hypothesis.
 Counting
 
 ### 4.1 The Basics of Counting
+
+### 4.2 The Pigeonhole Principle
+
+### 4.3 Permutations and Combinations
+
+### 4.4 Discrete Probability
+
+### 4.5 Probability Theory
+
+### 4.6 Generalized Permutations and Combinations
+
+### 4.7 Generating Permutations and Combinations
