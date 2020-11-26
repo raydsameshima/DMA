@@ -24,4 +24,7 @@ TreeDiagram.lhs
 >   let ls = nonConsectiveOnes 4
 >   print $ length ls 
 >   putStrLn $ "the list is: " ++ show ls
->   
+   
+
+
+
