@@ -212,4 +212,4 @@ A linear homogeneous recurrence relation of degree k with const. coeff. is a rec
   a(n+1) = c1*a(n-1) + .. + ck*a(n-k)
 ```
 
-where `ck /= 0` holds.
+where `ck /= 0` holds, with given k initial conditions: `a(0) .. a(k-1)`
