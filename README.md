@@ -213,3 +213,5 @@ A linear homogeneous recurrence relation of degree k with const. coeff. is a rec
 ```
 
 where `ck /= 0` holds, with given k initial conditions: `a(0) .. a(k-1)`
+
+A systematic approach is based on the characteristic equation.
