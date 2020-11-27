@@ -173,6 +173,12 @@ There exist more efficient and fast algorithms:
 
 ### 3.5 Program Correctness
 
+### Supplementary Exercises
+* Ulam numbers
+[https://oeis.org/A002858](https://oeis.org/A002858)
+
+
+
 ## Chappter 04
 Counting
 
@@ -189,3 +195,21 @@ Counting
 ### 4.6 Generalized Permutations and Combinations
 
 ### 4.7 Generating Permutations and Combinations
+
+
+## Chapter 05
+Adcanced Counting Techniques
+
+### 5.1 Recurrence Relations
+
+### 5.2 Solving Recurrence Relations
+We consider a class of recurrence relation in which the recurrence relation is written as a linear combination of previous terms.
+
+* Linear homogeneous recurrence relations
+A linear homogeneous recurrence relation of degree k with const. coeff. is a recurrence relation of the form:
+
+```
+  a(n+1) = c1*a(n-1) + .. + ck*a(n-k)
+```
+
+where `ck /= 0` holds.
