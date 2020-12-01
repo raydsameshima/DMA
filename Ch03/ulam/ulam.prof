@@ -1,0 +1,39 @@
+	Mon Nov 30 22:23 2020 Time and Allocation Profiling Report  (Final)
+
+	   ulam +RTS -p -RTS
+
+	total time  =        0.22 secs   (220 ticks @ 1000 us, 1 processor)
+	total alloc = 230,074,000 bytes  (excludes profiling overheads)
+
+COST CENTRE        MODULE    SRC                         %time %alloc
+
+nexts.candidates   Main      src/Main.hs:(35,5)-(40,12)   38.6   40.5
+nexts.(...)        Main      src/Main.hs:34:5-63          32.3   28.5
+nexts.candidates.v Main      src/Main.hs:38:18-25         29.1   31.0
+
+
+                                                                                            individual      inherited
+COST CENTRE             MODULE                SRC                        no.     entries  %time %alloc   %time %alloc
+
+MAIN                    MAIN                  <built-in>                 124          0    0.0    0.0   100.0  100.0
+ CAF                    GHC.Conc.Signal       <entire-module>            234          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Encoding       <entire-module>            225          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Encoding.Iconv <entire-module>            223          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Handle.FD      <entire-module>            215          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Handle.Text    <entire-module>            213          0    0.0    0.0     0.0    0.0
+ CAF:main               Main                  src/Main.hs:6:1-4          247          0    0.0    0.0     0.0    0.0
+  main                  Main                  src/Main.hs:(6,1)-(7,20)   248          1    0.0    0.0     0.0    0.0
+ CAF:main1              Main                  <no location info>         246          0    0.0    0.0     0.0    0.0
+  main                  Main                  src/Main.hs:(6,1)-(7,20)   250          0    0.0    0.0     0.0    0.0
+   ulam                 Main                  src/Main.hs:(12,1)-(15,26) 251          1    0.0    0.0     0.0    0.0
+ CAF:main3              Main                  <no location info>         243          0    0.0    0.0   100.0  100.0
+  ulams                 Main                  src/Main.hs:20:1-25        253          0    0.0    0.0   100.0  100.0
+   nexts                Main                  src/Main.hs:(21,1)-(40,12) 254        298    0.0    0.0   100.0  100.0
+    nexts.(...)         Main                  src/Main.hs:34:5-63        257        298   32.3   28.5    32.3   28.5
+     isSingleton        Main                  src/Main.hs:(43,1)-(45,26) 258       2576    0.0    0.0     0.0    0.0
+    nexts.candidates    Main                  src/Main.hs:(35,5)-(40,12) 255        298   38.6   40.5    67.7   71.4
+     nexts.candidates.v Main                  src/Main.hs:38:18-25       256    4455100   29.1   31.0    29.1   31.0
+    nexts.u             Main                  src/Main.hs:34:5-63        259        298    0.0    0.0     0.0    0.0
+ CAF:main_$sulams       Main                  src/Main.hs:20:1-5         244          0    0.0    0.0     0.0    0.0
+  ulams                 Main                  src/Main.hs:20:1-25        252          1    0.0    0.0     0.0    0.0
+ main                   Main                  src/Main.hs:(6,1)-(7,20)   249          0    0.0    0.0     0.0    0.0
