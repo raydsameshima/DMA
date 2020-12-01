@@ -18,6 +18,13 @@ main = do
   putStrLn "Biconditional: " 
   print [p <=> q | p <- bv, q <- bv]
 
+
+  putStrLn "Consider (p || q) and ((p ==> q) ==> q)"
+  putStrLn $ "truth table of (p || q):          " ++ show [p || q | p <- bv, q <- bv]
+  putStrLn $ "truth table of ((p ==> q) ==> q): " ++ show [((p ==> q) ==> q) | p <- bv, q <- bv]
+
+
+
 --
 
 -- Basic Boolean Variables:
@@ -37,3 +44,6 @@ p ==> q
 
 (<=>) :: Bool -> Bool -> Bool
 p <=> q = (p ==> q) && (q ==> p)
+
+
+
