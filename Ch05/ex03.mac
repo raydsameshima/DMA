@@ -1,0 +1,4 @@
+/* example 3 of ch05 */
+load(solve_rec);
+req:a[n] = a[n-1]+2*a[n-2];
+solve_rec(req,a[n],a[0] = 2,a[1] = 7);

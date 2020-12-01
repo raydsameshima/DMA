@@ -214,9 +214,10 @@ We consider a class of recurrence relation in which the recurrence relation is w
 A linear homogeneous recurrence relation of degree k with const. coeff. is a recurrence relation of the form:
 
 ```
-  a(n+1) = c1*a(n-1) + .. + ck*a(n-k)
+  a(n) = c1*a(n-1) + .. + ck*a(n-k)
 ```
 
 where `ck /= 0` holds, with given k initial conditions: `a(0) .. a(k-1)`
 
 A systematic approach is based on the characteristic equation.
+

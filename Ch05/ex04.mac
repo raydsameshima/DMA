@@ -1,0 +1,4 @@
+/* example 4 of chapter 05 */
+load(solve_rec);
+req:f[n] = f[n-1]+f[n-2];
+solve_rec(req,f[n],f[0] = 0,f[1] = 1);

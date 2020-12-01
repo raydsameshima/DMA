@@ -1,0 +1,12 @@
+/* example 05 of chapter 05 */
+load(solve_rec);
+req:a[n] = 6*a[n-1]-9*a[n-2];
+
+/* if we set no initial condition: */
+solve_rec(req,a[n]);
+
+/* if we set an initial condition:*/
+solve_rec(req,a[n],a[0] = 1);
+
+/* if we set two initial conditions, we can fully solve the recurrence relation: */
+solve_rec(req,a[n],a[0] = 1,a[1] = 6);

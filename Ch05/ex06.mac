@@ -1,0 +1,5 @@
+
+load(solve_rec);
+req:a[n] = 6*a[n-1]-11*a[n-2]+6*a[n-3];
+solve_rec(req,a[n]);
+solve_rec(req,a[n],a[0] = 2,a[1] = 5,a[2] = 15);
