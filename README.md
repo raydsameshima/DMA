@@ -177,6 +177,11 @@ There exist more efficient and fast algorithms:
 * Ulam numbers
 [https://oeis.org/A002858](https://oeis.org/A002858)
 
+[http://www.rosettacode.org/wiki/Ulam_numbers](http://www.rosettacode.org/wiki/Ulam_numbers)
+
+My implementation is based on a lazy list.
+It can give first few hundreds within few second (i.e., extremely slow).
+
 
 
 ## Chappter 04
