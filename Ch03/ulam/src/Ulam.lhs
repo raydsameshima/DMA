@@ -2,7 +2,7 @@ Ulam.lhs
 
 > module Ulam where
 > import Data.List 
-> import qualified Data.Vector.Unboxed as V
+> -- import qualified Data.Vector.Unboxed as V
 
 Supplementary Exercise 8 (page 227)
 
@@ -28,21 +28,17 @@ Ulam numbers (https://oeis.org/A002858)
 > ulams = 1:2:(nexts [2,1])
 > nexts us = u: (nexts (u:us))
 >   where
->     n = length us
->     [u] = head . filter isSingleton . group . sort  $ 
->             [v | i <- [0 .. n-2], j <- [i+1 .. n-1] 
->                , let s = us !! i
->                , let t = us !! j
->                , let v = s+t
->                , v > head us
->                ]
+>     f = head . filter isSingleton . group . sort
+>     [u] = f candidates 
+>     candidates 
+>       = [v | w1 <- tail us
+>            , w2 <- takeWhile (> w1) us
+>            , let v = w1 + w2
+>            , v > head us
+>            ]
 > 
 > isSingleton :: [a] -> Bool
 > isSingleton as
 >   | length as == 1 = True
 >   | otherwise      = False
-
-
-
-
 
