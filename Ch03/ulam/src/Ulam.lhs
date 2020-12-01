@@ -2,6 +2,7 @@ Ulam.lhs
 
 > module Ulam where
 > import Data.List 
+> import qualified Data.Vector.Unboxed as V
 
 Supplementary Exercise 8 (page 227)
 
@@ -18,11 +19,9 @@ Ulam numbers (https://oeis.org/A002858)
 > ulam 
 >   :: Integral i =>
 >      Int -> i
-> ulam 1 = 1
-> ulam 2 = 2
 > ulam n
->   | n > 2 = ulams !! (n-1)
->
+>   | n > 0 = ulams !! (n-1)
+> 
 > ulams
 >   :: Integral n =>
 >      [n]
@@ -37,13 +36,13 @@ Ulam numbers (https://oeis.org/A002858)
 >                , let v = s+t
 >                , v > head us
 >                ]
->
+> 
 > isSingleton :: [a] -> Bool
 > isSingleton as
 >   | length as == 1 = True
 >   | otherwise      = False
->
->
- 
+
+
+
 
 

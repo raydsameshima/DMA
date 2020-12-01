@@ -2,10 +2,13 @@ module Main where
 
 import Data.List
 
+import Ulam (ulam)
+
 main :: IO ()
 main = do
   print . ulam $ 300
 
+{-
 ulam 
   :: Integral i =>
      Int -> i
@@ -44,3 +47,4 @@ isSingleton
 isSingleton as
   | length as == 1 = True
   | otherwise      = False
+-}
