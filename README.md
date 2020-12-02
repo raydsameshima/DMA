@@ -221,3 +221,20 @@ where `ck /= 0` holds, with given k initial conditions: `a(0) .. a(k-1)`
 
 A systematic approach is based on the characteristic equation.
 
+### 5.3 Divide-and-Conquer Relations
+Consider an algorithm that splits a problem size n into a sub-problem of the size ``n/b = n `div` b``.
+Suppose that a total g(n) additional operations are required in this division procedure:
+
+```
+  f(n) = a*f(n/b) + g(n)
+```
+
+This relation is called divide-and-conquer.
+
+### 5.4 Generating Functions
+Formal power series (we ignore the convergence problem).
+
+### 5.5 Inclusion-Exclusion
+
+### 5.6 Application of Inclusion-Exclusion
+
