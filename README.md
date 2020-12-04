@@ -238,3 +238,26 @@ Formal power series (we ignore the convergence problem).
 
 ### 5.6 Application of Inclusion-Exclusion
 
+
+
+## Chapter 06
+Relations
+
+### 6.1 Relations and Their Properties
+A binary relation from a set A to another set B is a subset of the product set A×B.
+A binary relation on A is a binary relation from A to A itself.
+
+* A relation R on A is reflexive iff for any element a of A, aRa.
+* A relation R on A is symmetric iff if aRb then bRa.
+* A relation R on A is antisymmetric iff if aRb and bRa then a=b.
+* A relation R on A is transitive iff if aRb and bRc then aRc.
+
+### 6.2 n-ary Relations and Their Applications
+A model of computer databases (the relational data model).
+
+### 6.3 Representing Relations
+For a finite set, labeling elements (i.e., converting a set into a list), we can express a relation as a zero-one matrix (or boolean matrix).
+One gain of this method is composition-preserving property (in other words, the zero-one representation forms a functor).
+Another choice would be digraphs (directed graphs); a digraph consists of a set of vertices and an ordered pair of vertices (edges).
+
+### 6.4 Closures of Relations
