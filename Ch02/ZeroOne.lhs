@@ -48,3 +48,33 @@ Let me combine them together; list level bitwise operation and convert them into
 >       d' = (2><3) d
 >   print c'
 >   print d'
+
+After doing the standard matrix product, we can simply filter it via if_then_else
+
+> ex10 = do
+>   let a, b :: Matrix I
+>       a = (3><2) 
+>           [1,0
+>           ,0,1
+>           ,1,0]
+>       b = (2><3)
+>           [1,1,0
+>           ,0,1,1]
+>   let c = cmap (\x -> if x > 0 then 1 else 0) a <> b
+>   print c
+
+> toZeroOne :: I -> I
+> toZeroOne x = if x>0 then 1 else 0
+>   
+> matrixPower :: Numeric t => Matrix t -> Int -> Matrix t
+> matrixPower a 0 = (1><1) [0]
+> matrixPower a 1 = a
+> matrixPower a n = a <> (matrixPower a (n-1))
+
+> ex11 = do
+>   let a :: Matrix I
+>       a = (3><3)
+>           [0,0,1
+>           ,1,0,0
+>           ,1,1,0]
+>   mapM_ (print . cmap toZeroOne . matrixPower a) [1 .. 5]
