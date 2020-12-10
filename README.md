@@ -115,6 +115,9 @@ The Fundamentals: Algorithms, the Integers, and Matrices
   * An introduction: 
   [http://dis.um.es/~alberto/hmatrix/hmatrix.html](http://dis.um.es/~alberto/hmatrix/hmatrix.html)
 
+* For Bitwise operation, [https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Bits.html](https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Bits.html)
+My question is how we combine some matrix library (in particular matrix operation with addition and multiplication) and that of boolean (i.e., bitwise).
+
 ## Chapter 03
 Mathematical Reasoning
 
@@ -261,3 +264,6 @@ One gain of this method is composition-preserving property (in other words, the 
 Another choice would be digraphs (directed graphs); a digraph consists of a set of vertices and an ordered pair of vertices (edges).
 
 ### 6.4 Closures of Relations
+So far skipped. 
+
+## Chapter 07
