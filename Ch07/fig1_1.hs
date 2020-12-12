@@ -44,7 +44,7 @@ example = do
   print $ graphIsDirected network
   putStrLn "map function is also there:"
   let newNetwork = mapDotGraph ("US-" `Text.append` ) network
-  runGraphviz newNetwork Png "fig1_1new.png"
+--  runGraphviz newNetwork Png "fig1_1new.png"
 
   putStrLn "Once I append US-, the new graph becomes:"
   putStrLn . Text.unpack . printDotGraph $ newNetwork
@@ -60,8 +60,15 @@ example = do
 
   putStrLn "To obtain the list of nodes:"
   let listOfNodes = map nodeID $ graphNodes network
-  print listOfNodes
+      listOfDegre = map (length . G.adjacentTo (G.fromDotRepr network)) listOfNodes
+  print $ zip listOfNodes listOfDegre
 
+  putStrLn "To check the handshaking theorem:"
+
+  print $ sum listOfDegre
+
+{-
   let degreeNetwork = mapDotGraph (length . G.adjacentTo (G.fromDotRepr network)) network
   
   putStrLn . Text.unpack . printDotGraph $ degreeNetwork
+-}

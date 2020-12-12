@@ -266,4 +266,29 @@ Another choice would be digraphs (directed graphs); a digraph consists of a set 
 ### 6.4 Closures of Relations
 So far skipped. 
 
+### 6.5 Equivalence Relations
+An equivalence relation is a relation which is reflexive, symmetric, and transitive.
+
+An equivalence relation on a set splits the set into disjoint subsets: equivalence classes.
+
+### 6.6 Partial Orderings
+A partial order is a relation which is reflexive, antisymmetric, and transitive.
+
+A lattice is a poset in which every pair of elements has both a least upper bound and a greatest lower bound.
+
+Topological Sorting (based on the following fact)
+
+Every finite non-empty poset has a minimal; choose one element a0, if a0 is minimal then nothing has to be proven.
+If a0 is not a minimal, then there exists a1 such that a1 < a0; is a1 is minimal, done.
+Since the set is assumed to be finite, this procedure will terminate in a finite step.
+
 ## Chapter 07
+Graphs
+
+*Libraries
+  *[https://hackage.haskell.org/package/graphviz](https://hackage.haskell.org/package/graphviz)
+
+*Examples
+  *[https://stackoverflow.com/a/20860364](https://stackoverflow.com/a/20860364)
+
+  *[https://qiita.com/lotz/items/4443a3ccb35780fa0c00](https://qiita.com/lotz/items/4443a3ccb35780fa0c00)
