@@ -3,16 +3,20 @@
 
 -- fig1_1.hs
 
-import Data.GraphViz.Attributes
+-- import Data.GraphViz.Attributes
 import Data.GraphViz.Commands
 import Data.GraphViz.Types
 import Data.GraphViz.Types.Generalised
 import Data.GraphViz.Types.Monadic
 
-import Data.Text.Lazy (Text)
-import qualified Data.Text.Lazy as Text
 import qualified Data.GraphViz.Types.Graph as G
 
+import Data.Text.Lazy (Text)
+import qualified Data.Text.Lazy as Text
+
+import Data.GraphViz.Commands.IO (writeDotFile)
+
+-- Let us construct a graph: figure 1 of page 439.
 network :: DotGraph Text
 network = graph' $ do
   let sf = "San Francisco"
@@ -22,17 +26,21 @@ network = graph' $ do
       ws = "Washington"
       dt = "Detroit"
       dv = "Denver"
-  sf --> dv
-  dv --> la
-  la --> sf
-  dv --> ch
-  ch --> ws
-  ws --> ny
-  ny --> ch
-  ny --> dt
-  dt --> ch
+  sf <-> dv
+  dv <-> la
+  la <-> sf
+  dv <-> ch
+  ch <-> ws
+  ws <-> ny
+  ny <-> ch
+  ny <-> dt
+  dt <-> ch
 
-main = runGraphviz network Png "fig1_1.png"
+-- to print an image file
+generateFigurePng = runGraphviz network Png "fig1_1.png"
+generateFigureSvg = runGraphviz network Svg "fig1_1.svg"
+
+generateDotFile = writeDotFile "fig1_1.dot" network
 
 example = do
   putStrLn "Let me show some example; the network is DotGraph:"
