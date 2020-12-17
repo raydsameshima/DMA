@@ -7,6 +7,8 @@ io01.hs
 io02.hs
 loops01.hs
 loops02.hs
+safeEx01.hs
+safeEx02.hs
 shell01.hs
 shell02.hs
 shell03copied.hs

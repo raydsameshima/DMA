@@ -6,6 +6,7 @@
 import Turtle
 
 -- save the outcomes of ls command into a file
-main = 
+main = do
   output "anotherTempFile.txt" (inshell "ls" empty)
+  stdout . input $ "anotherTempFile.txt"
 
