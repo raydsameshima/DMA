@@ -7,9 +7,9 @@ main :: IO ()
 main = do
   dir  <- pwd 
   time <- datefile dir 
---  print time
+  print time -- echo $ repr time
   -- echo time
-  echo $ repr time
+  
 
 {-
 datefile 
@@ -27,5 +27,7 @@ print
      a -> IO ()
 
 Note that a Line value is a piece of text witout newlines.
+
+print === echo . repr 
 -}
 
