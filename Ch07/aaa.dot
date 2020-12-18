@@ -1,0 +1,11 @@
+graph {
+    "San Francisco" -- Denver;
+    Denver -- "Los Angeles";
+    "Los Angeles" -- "San Francisco";
+    Denver -- Chicago;
+    Chicago -- Washington;
+    Washington -- "New York";
+    "New York" -- Chicago;
+    "New York" -- Detroit;
+    Detroit -- Chicago;
+}

@@ -1,4 +1,5 @@
 #!/usr/bin/env stack
+-- stack --resolver lts-10.2 script
 
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -6,17 +7,14 @@
 
 import Turtle
 
-import Data.GraphViz.Commands
-import Data.GraphViz.Types
-import Data.GraphViz.Types.Generalised
 import Data.GraphViz.Types.Monadic
 
 import qualified Data.GraphViz.Types.Graph as G
+import qualified Data.Text.Lazy            as Text
 
-import Data.Text.Lazy (Text)
-import qualified Data.Text.Lazy as Text
-
-import Data.GraphViz.Commands.IO (writeDotFile)
+import Data.GraphViz.Types.Generalised (DotGraph)
+import Data.GraphViz.Commands.IO       (writeDotFile)
+import Data.GraphViz.Printing          (renderDot, toDot)
 
 -- Let us construct a graph: figure 1 of page 439.
 network :: DotGraph Text.Text
@@ -38,35 +36,39 @@ network = graph' $ do
   ny <-> dt
   dt <-> ch
 
--- to print an image file
-generateFigurePng = runGraphviz network Png "fig1_1.png"
-generateFigureSvg = runGraphviz network Svg "fig1_1.svg"
-
-generateDotFile = do
-  let dotFileName = "fig1_1.dot"
-
-  writeDotFile dotFileName network
-  
+ 
+-- The shell command I want to reproduce:
 -- dot -Tsvg fig1_1.dot > fig1_1_another.svg
 
 {-
-  creating a temp dot-file in the current directory,
-  write the dot file
-  then redirecting the dot-file with dot command,
-  create an svg file
+λ> :i renderDot
+renderDot :: DotCode -> Text
+  	-- Defined in ‘Data.GraphViz.Printing’
+
+λ> :i toDot 
+class PrintDot a where
+  ...
+  toDot :: a -> DotCode
+  ...
+  	-- Defined in ‘Data.GraphViz.Printing’
+
+λ> :i graphToDot nonClusteredParams 
+graphToDot ::
+  (Ord cl, Data.Graph.Inductive.Graph.Graph gr) =>
+  GraphvizParams Data.Graph.Inductive.Graph.Node nl el cl l
+  -> gr nl el -> DotGraph Data.Graph.Inductive.Graph.Node
+  	-- Defined in ‘Data.GraphViz’
+nonClusteredParams :: GraphvizParams n nl el () nl
+  	-- Defined in ‘Data.GraphViz’
+
+unpack (renderDot (toDot network)) :: String
+
 -}
-generateSvg = do
-  dir <- pwd
-  (file,_) <- using (mktemp dir "dot") -- file :: FilePath
-  liftIO $ print file
 
-  writeDotFile (encodeString file) network
-
-  shell ("dot -Tsvg " `append` file `append` " > test.svg") empty
+main = do
+  let fileName = "aaa.dot" 
+  writeFile fileName (Text.unpack (renderDot (toDot network)))
+ 
+  stdout $ inshell ("dot -Tsvg aaa.dot > aaa.svg") Turtle.empty
   
-
-
--- using turtle, our goal is
---   to generate a (aux) dot file
---   using pipe (?) draw a figure in an appropriate format (svg?)
-
+  
