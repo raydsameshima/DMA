@@ -287,6 +287,7 @@ Graphs
 
 *Libraries
   *[https://hackage.haskell.org/package/graphviz](https://hackage.haskell.org/package/graphviz)
+GraphViz for haskellers.
 
 *Examples
   *[https://stackoverflow.com/a/20860364](https://stackoverflow.com/a/20860364)
