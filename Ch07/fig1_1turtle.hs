@@ -6,6 +6,7 @@
 -- fig1_1.hs
 
 import Turtle
+import Prelude hiding (FilePath)
 
 import Data.GraphViz.Types.Monadic
 
@@ -17,7 +18,8 @@ import Data.GraphViz.Commands.IO       (writeDotFile)
 import Data.GraphViz.Printing          (renderDot, toDot)
 
 -- Let us construct a graph: figure 1 of page 439.
-network :: DotGraph Text.Text
+-- network :: DotGraph Text.Text
+network :: DotGraph Text
 network = graph' $ do
   let sf = "San Francisco"
       la = "Los Angeles"
@@ -40,35 +42,20 @@ network = graph' $ do
 -- The shell command I want to reproduce:
 -- dot -Tsvg fig1_1.dot > fig1_1_another.svg
 
-{-
-λ> :i renderDot
-renderDot :: DotCode -> Text
-  	-- Defined in ‘Data.GraphViz.Printing’
-
-λ> :i toDot 
-class PrintDot a where
-  ...
-  toDot :: a -> DotCode
-  ...
-  	-- Defined in ‘Data.GraphViz.Printing’
-
-λ> :i graphToDot nonClusteredParams 
-graphToDot ::
-  (Ord cl, Data.Graph.Inductive.Graph.Graph gr) =>
-  GraphvizParams Data.Graph.Inductive.Graph.Node nl el cl l
-  -> gr nl el -> DotGraph Data.Graph.Inductive.Graph.Node
-  	-- Defined in ‘Data.GraphViz’
-nonClusteredParams :: GraphvizParams n nl el () nl
-  	-- Defined in ‘Data.GraphViz’
-
-unpack (renderDot (toDot network)) :: String
-
--}
-
+main :: IO ()
 main = do
-  let fileName = "aaa.dot" 
-  writeFile fileName (Text.unpack (renderDot (toDot network)))
- 
-  stdout $ inshell ("dot -Tsvg aaa.dot > aaa.svg") Turtle.empty
-  
-  
+  let fileName, dotFileName, svgFileName :: FilePath
+      -- the file names for dot and svg file
+      fileName    = "bbb"  
+      dotFileName = fileName <.> "dot"
+      svgFileName = fileName <.> "svg"
+
+  -- write a dot file of the graph 
+  output dotFileName (select . textToLines . fromString . Text.unpack . renderDot . toDot $ network)
+
+  let Right fnDot = toText dotFileName
+      Right fnSvg = toText svgFileName
+
+  -- calling external (shell command?), draw an svg fi.e
+  stdout $ inshell ("dot -Tsvg " <> fnDot <> " > " <> fnSvg) Turtle.empty
+    
