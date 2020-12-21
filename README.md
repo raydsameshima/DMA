@@ -293,3 +293,7 @@ GraphViz for haskellers.
   *[https://stackoverflow.com/a/20860364](https://stackoverflow.com/a/20860364)
 
   *[https://qiita.com/lotz/items/4443a3ccb35780fa0c00](https://qiita.com/lotz/items/4443a3ccb35780fa0c00)
+
+
+As an attempt to automate the drawing graphs, I'd use [Turtle](https://hackage.haskell.org/package/turtle).
+My first attempt is ugly, though.
