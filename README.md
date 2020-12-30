@@ -297,3 +297,11 @@ GraphViz for haskellers.
 
 As an attempt to automate the drawing graphs, I'd use [Turtle](https://hackage.haskell.org/package/turtle).
 My first attempt is ugly, though.
+
+## Chapter 08
+Tree
+
+## Chapter 09 
+Boolean Algebra
+
+[http://hackage.haskell.org/package/cond-0.4.1.1](http://hackage.haskell.org/package/cond-0.4.1.1)
